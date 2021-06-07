@@ -13,9 +13,9 @@ export const getCountries = () => async(dispatch) => {
     }
 };
 
-export const getCountriesByRegion = () => async(dispatch) => {
+export const getCountriesByRegion = (region) => async(dispatch) => {
     try {
-        const { data } = await api.fetchCountriesByRegion();
+        const { data } = await api.fetchCountriesByRegion(region);
 
         dispatch({ type: FETCH_REGION, payload: data });
     }
