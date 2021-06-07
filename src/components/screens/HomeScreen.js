@@ -20,13 +20,28 @@ const HomeScreen = () => {
 
     const countries = useSelector((state) => state.countries);
 
-    console.log(countries);
+    const [result, setResult] = useState(null);
+
+    useEffect(() => {
+        setResult(countries);
+    }, [countries]);
+
+    const search = (e) => {
+        let value = e.target.value.toLowerCase();
+        const searchResults = countries.filter((country) => {
+            return country.name.includes(value) !== false;
+        });
+
+        setResult(searchResults);
+    }
+
+    console.log(result);
 
     return (
         <>
             <div>
-                <form>
-                    <input />
+                <form onSubmit={(e) => {e.preventDefault()}}>
+                    <input type='text' placeholder='Search Countries by Name' onChange={(e) => {search(e)}} />
                 </form>
                 <Menu>
                     <Menu.Button>Filter By Region</Menu.Button>
