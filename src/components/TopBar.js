@@ -29,7 +29,7 @@ const TopBar = () => {
                     </div>
                 </Switch.Group>
             </div>
-            <HomeScreen />
+            <HomeScreen dark={dark} />
         </div>
     )
 }
