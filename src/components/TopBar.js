@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import { Switch } from '@headlessui/react';
 
+
+import HomeScreen from './screens/HomeScreen';
+
 const TopBar = () => {
 
     const [dark, setDark] = useState(false);
@@ -23,6 +26,7 @@ const TopBar = () => {
                     </div>
                 </Switch.Group>
             </div>
+            <HomeScreen />
         </div>
     )
 }
