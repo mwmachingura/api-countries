@@ -6,9 +6,13 @@ import TopBar from './components/TopBar';
 
 const App = () => {
     return (
-        <div>
-            <TopBar />
-        </div>
+        <Router>
+            <main>
+                <Switch>
+                    <TopBar />
+                </Switch>
+            </main>
+        </Router>
     )
 }
 
