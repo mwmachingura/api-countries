@@ -20,7 +20,7 @@ const HomeScreen = ({ dark }) => {
 
     const countries = useSelector((state) => state.countries);
 
-    const [result, setResult] = useState(null);
+    const [result, setResult] = useState([]);
 
     useEffect(() => {
         setResult(countries);
@@ -34,8 +34,6 @@ const HomeScreen = ({ dark }) => {
 
         setResult(searchResults);
     }
-
-    console.log(result);
 
     return (
         <>
@@ -100,7 +98,7 @@ const HomeScreen = ({ dark }) => {
                     </Menu.Items>
                 </Menu>
             </div>
-            <Countries />
+            <Countries dark={dark} countries={result} />
         </>
     )
 }
