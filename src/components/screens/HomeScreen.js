@@ -48,7 +48,7 @@ const HomeScreen = ({ dark }) => {
                 <Menu as='div' className='relative inline-block text-center my-2'>
                     <Menu.Button className={`text-base inline-flex justify-center items-center py-2 px-4 rounded shadow-md outline-none focus:outline-none ${(dark) ? 'bg-dark-blue text-white': 'bg-white text-dark-blue-text'}`}>
                         Filter By Region
-                        <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                        <i className="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                     </Menu.Button>
                     <Menu.Items className={`absolute right-0 origin-top-right mt-1 rounded flex flex-col justify-items-center w-full shadow ${(dark) ? 'bg-dark-blue': 'bg-white'}`}>
                         <Menu.Item>
