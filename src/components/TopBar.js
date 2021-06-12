@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import { Switch } from '@headlessui/react';
+import { Route } from 'react-router-dom';
 
 
 import HomeScreen from './screens/HomeScreen';
+import CountryScreen from './screens/CountryScreen';
 
 const TopBar = () => {
 
@@ -29,7 +31,8 @@ const TopBar = () => {
                     </div>
                 </Switch.Group>
             </div>
-            <HomeScreen dark={dark} />
+            <Route exact path='/' render={() => (<HomeScreen dark={dark }/>)} />
+            <Route exact path='/:paramName' render={() => (<CountryScreen dark={dark }/>)} />
         </div>
     )
 }
