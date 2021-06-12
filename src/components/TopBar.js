@@ -9,7 +9,7 @@ const TopBar = () => {
     const [dark, setDark] = useState(false);
 
     return (
-        <div className={`px-2 ${(dark) ? 'bg-very-dark-blue': 'bg-very-light-gray'}`}>
+        <div className={`px-2 min-h-screen ${(dark) ? 'bg-very-dark-blue': 'bg-very-light-gray'}`}>
             <div className={`shadow-md h-16 absolute top-0 left-0 w-full ${(dark) ? 'bg-dark-blue': 'bg-white'}`}></div>
             <div className='flex justify-between items-center relative h-16 mb-4'>
                 <div className='max-w-max'>
