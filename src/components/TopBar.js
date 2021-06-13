@@ -36,7 +36,7 @@ const TopBar = () => {
                 </div>
                 <Switch.Group>
                     <div className='flex items-center'>
-                        <Switch.Label className={`text-base font-light ${(dark === true) ? 'text-white': 'text-dark-blue-text'}`}>
+                        <Switch.Label className={`cursor-pointer text-base font-light ${(dark === true) ? 'text-white': 'text-dark-blue-text'}`}>
                             <i className={`mr-1 ${(dark === true) ? 'fas fa-moon': 'far fa-moon'}`}></i>
                             Dark Mode
                         </Switch.Label>
