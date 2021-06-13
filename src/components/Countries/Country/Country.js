@@ -9,7 +9,7 @@ const Country = ({ country, dark }) => {
     }
 
     return (
-        <div className={`w-72 h-auto ${(dark) ? 'bg-dark-blue text-white': 'bg-white text-dark-blue-text'}`}>
+        <div className={`w-72 h-auto ${(dark === true) ? 'bg-dark-blue text-white': 'bg-white text-dark-blue-text'}`}>
             <div className='w-full'>
                 <img alt='flag' src={country.flag} className='w-full object-cover h-36' />
             </div>
