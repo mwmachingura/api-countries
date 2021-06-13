@@ -6,13 +6,24 @@ import { Route } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import CountryScreen from './screens/CountryScreen';
 
-const TopBar = () => {
 
-    const [dark, setDark] = useState(true || sessionStorage.getItem('dark'));
+const useStateWithSessionStorage = sessionStorageKey => {
+    const [dark, setDark] = useState(() => {
+        console.log(sessionStorage.getItem('dark'));
+        if(sessionStorage.getItem('dark') !== null) return sessionStorage.getItem('dark');
+        return false;
+    })
 
     useEffect(() => {
         sessionStorage.setItem('dark', dark);
     }, [dark]);
+
+    return [dark, setDark];
+}
+
+const TopBar = () => {
+
+    const [dark, setDark] = useStateWithSessionStorage(false);
 
     console.log(dark);
 
