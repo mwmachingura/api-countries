@@ -37,8 +37,8 @@ const HomeScreen = ({ dark }) => {
 
     return (
         <>
-            <div className='py-4 h-full flex flex-col items-start'>
-                <form onSubmit={(e) => {e.preventDefault()}} className={`my-2 w-full h-10 rounded overflow-hidden sm:w-1/3 shadow-md flex justify-center items-center`}>
+            <div className='py-4 h-full flex flex-col items-start md:flex-row md:justify-between md:items-center'>
+                <form onSubmit={(e) => {e.preventDefault()}} className={`my-2 w-full h-10 rounded overflow-hidden md:w-1/3 shadow-md flex justify-center items-center`}>
                     <div className={`flex items-center w-full h-full`}>
                         <i className={`absolute fas fa-search p-2 text-center font-semibold text-sm ${(dark === true) ? 'text-white': 'text-dark-gray'}`}></i>
                         <input type='text' placeholder='Search for a Country' onChange={(e) => {search(e)}} 
