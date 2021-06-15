@@ -28,7 +28,7 @@ const TopBar = () => {
     console.log(dark);
 
     return (
-        <div className={`px-4 min-h-screen ${(dark === true) ? 'bg-very-dark-blue': 'bg-very-light-gray'}`}>
+        <div className={`px-4 md:px-8 min-h-screen ${(dark === true) ? 'bg-very-dark-blue': 'bg-very-light-gray'}`}>
             <div className={`shadow-md h-16 absolute top-0 left-0 w-full ${(dark === true) ? 'bg-dark-blue': 'bg-white'}`}></div>
             <div className='flex justify-between items-center relative h-16 mb-4'>
                 <div className='max-w-max'>
